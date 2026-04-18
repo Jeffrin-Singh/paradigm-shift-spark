@@ -6,7 +6,6 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import ServiceContent from "@/components/shared/ServiceContent";
 import { CheckCircle } from "lucide-react";
 import serviceImage from "@/assets/service-permanent.jpg";
-import portrait from "@/assets/portrait-2.jpg";
 
 const expertise = [
   "Administrative & Support Services",
@@ -19,7 +18,7 @@ const expertise = [
 const PermanentRecruitmentPage = () => (
   <Layout>
     <PageHero title="Permanent Recruitment" subtitle="Our Services" description="Finding the right person for the right job at the shortest possible time!" image={serviceImage} />
-    <ServiceContent image={portrait} imageAlt="Senior recruitment consultant in modern office">
+    <ServiceContent image={serviceImage} imageAlt="Senior recruitment consultant in modern office">
       <p className="text-muted-foreground leading-relaxed mb-4">
         Our Permanent Recruitment division helps businesses of all size to fill their vacancies with the best talent to help drive business growth. When you work with Paradigm Shift, you can be rest assured that we have your best interests at heart - our specialist recruitment consultants know your industry inside out, understand your needs, and are true experts in the field they recruit for.
       </p>

@@ -4,12 +4,11 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import ServiceContent from "@/components/shared/ServiceContent";
 import serviceImage from "@/assets/service-learning.jpg";
-import portrait from "@/assets/portrait-2.jpg";
 
 const LearningSolutionsPage = () => (
   <Layout>
     <PageHero title="Learning Solutions" subtitle="Our Services" description="Best-in-class training processes to reduce costs and deliver quantifiable results." image={serviceImage} />
-    <ServiceContent image={portrait} imageAlt="Learning and development leader">
+    <ServiceContent image={serviceImage} imageAlt="Learning and development leader">
       <p className="text-muted-foreground leading-relaxed mb-4">
         We offer a suite of best-in-class training processes that enable customers to reduce costs, sharpen their business focus and obtain quantifiable results. We offer training solutions to small and medium enterprises and large enterprises across our footprint.
       </p>
