@@ -183,26 +183,18 @@ const Index = () => (
         </ScrollReveal>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {[
-            { img: portrait1, label: "Recruitment", desc: "Permanent & executive search" },
-            { img: portrait2, label: "Staffing", desc: "Flexible workforce solutions" },
-            { img: portrait3, label: "Assessments", desc: "Behavioural & skills" },
-            { img: featureHandshake, label: "Transition", desc: "Coaching & outplacement" },
+            { icon: Users, label: "Recruitment", desc: "Permanent & executive search" },
+            { icon: Clock, label: "Staffing", desc: "Flexible workforce solutions" },
+            { icon: ClipboardCheck, label: "Assessments", desc: "Behavioural & skills" },
+            { icon: ArrowRightLeft, label: "Transition", desc: "Coaching & outplacement" },
           ].map((p, i) => (
             <ScrollReveal key={p.label} delay={i * 80}>
-              <div className="group relative overflow-hidden rounded-2xl aspect-[4/5] card-elevated">
-                <img
-                  src={p.img}
-                  alt={p.label}
-                  loading="lazy"
-                  width={1024}
-                  height={1280}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5 text-primary-foreground">
-                  <h3 className="font-heading font-semibold text-lg">{p.label}</h3>
-                  <p className="text-primary-foreground/80 text-sm">{p.desc}</p>
+              <div className="bg-card rounded-2xl p-6 border border-border/50 card-elevated h-full">
+                <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <p.icon className="w-5 h-5 text-primary" />
                 </div>
+                <h3 className="font-heading font-semibold text-foreground mb-1">{p.label}</h3>
+                <p className="text-muted-foreground text-sm">{p.desc}</p>
               </div>
             </ScrollReveal>
           ))}
