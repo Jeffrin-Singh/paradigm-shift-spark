@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { HelpCircle } from "lucide-react";
+import serviceImage from "@/assets/service-assessments.jpg";
 
 const questions = [
   "Are you overwhelmed by the number of applications?",
@@ -13,7 +14,7 @@ const questions = [
 
 const CandidateAssessmentsPage = () => (
   <Layout>
-    <PageHero title="Candidate Assessments" subtitle="Our Services" description="Streamline and optimize employee recruitment and onboarding." />
+    <PageHero title="Candidate Assessments" subtitle="Our Services" description="Streamline and optimize employee recruitment and onboarding." image={serviceImage} />
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 max-w-4xl">
         <ScrollReveal>

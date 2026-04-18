@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { CheckCircle } from "lucide-react";
+import serviceImage from "@/assets/service-permanent.jpg";
 
 const expertise = [
   "Administrative & Support Services",
@@ -15,7 +16,7 @@ const expertise = [
 
 const PermanentRecruitmentPage = () => (
   <Layout>
-    <PageHero title="Permanent Recruitment" subtitle="Our Services" description="Finding the right person for the right job at the shortest possible time!" />
+    <PageHero title="Permanent Recruitment" subtitle="Our Services" description="Finding the right person for the right job at the shortest possible time!" image={serviceImage} />
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 max-w-4xl">
         <ScrollReveal>
