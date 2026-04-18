@@ -6,7 +6,6 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import ServiceContent from "@/components/shared/ServiceContent";
 import { HelpCircle } from "lucide-react";
 import serviceImage from "@/assets/service-transition.jpg";
-import portrait from "@/assets/portrait-3.jpg";
 
 const questions = [
   "Are you a Dynamic Business?",
@@ -30,7 +29,7 @@ const CareerTransitionPage = () => (
         </ScrollReveal>
       </div>
     </section>
-    <ServiceContent image={portrait} imageAlt="Career coaching specialist" imageSide="left">
+    <ServiceContent image={serviceImage} imageAlt="Career coaching specialist" imageSide="left">
       <p className="text-muted-foreground leading-relaxed mb-8">
         Our suite of flexible coaching and learning programs provides guidance and support to your departing workforce find new jobs faster. Through in-person, virtual, blended learning or group programs, we help individuals focus on their next move and develop the skills to achieve their career goals.
       </p>

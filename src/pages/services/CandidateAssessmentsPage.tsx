@@ -6,7 +6,6 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import ServiceContent from "@/components/shared/ServiceContent";
 import { HelpCircle } from "lucide-react";
 import serviceImage from "@/assets/service-assessments.jpg";
-import portrait from "@/assets/portrait-3.jpg";
 
 const questions = [
   "Are you overwhelmed by the number of applications?",
@@ -31,7 +30,7 @@ const CandidateAssessmentsPage = () => (
         </ScrollReveal>
       </div>
     </section>
-    <ServiceContent image={portrait} imageAlt="Talent assessment specialist in modern office">
+    <ServiceContent image={serviceImage} imageAlt="Talent assessment specialist in modern office">
       <p className="text-muted-foreground leading-relaxed mb-4">
         Our Assessment division helps businesses of all size with an affordable and dependable solution to streamline and optimize employee recruitment and onboarding. Our tools help you assess and hire high-quality talent through a suite of behavioural and skills assessments.
       </p>

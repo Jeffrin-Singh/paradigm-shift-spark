@@ -6,7 +6,6 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 import ServiceContent from "@/components/shared/ServiceContent";
 import { HelpCircle } from "lucide-react";
 import serviceImage from "@/assets/service-insights.jpg";
-import portrait from "@/assets/portrait-1.jpg";
 
 const questions = [
   "Do you run a people business?",
@@ -30,7 +29,7 @@ const EmployeeInsightsPage = () => (
         </ScrollReveal>
       </div>
     </section>
-    <ServiceContent image={portrait} imageAlt="HR analytics consultant" imageSide="left">
+    <ServiceContent image={serviceImage} imageAlt="HR analytics consultant" imageSide="left">
       <p className="text-muted-foreground leading-relaxed mb-4">
         Our surveys help our clients create a high-performance culture through improved return on talent investments and deliver measurable business results.
       </p>
