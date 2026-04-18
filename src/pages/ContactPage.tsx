@@ -7,6 +7,7 @@ import PageHero from "@/components/shared/PageHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { MapPin, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import contactImage from "@/assets/contact.jpg";
 
 const offices = [
   { city: "Sydney", address: "Level 15 Eclipse Tower, 60 Station Street, Parramatta NSW 2150" },
@@ -27,7 +28,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <PageHero title="Contact Us" subtitle="Get in Touch" description="We'd love to hear from you. Reach out to discuss how we can help." />
+      <PageHero title="Contact Us" subtitle="Get in Touch" description="We'd love to hear from you. Reach out to discuss how we can help." image={contactImage} />
 
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">

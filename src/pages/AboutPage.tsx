@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { Globe, Users, Lightbulb, Target, Shield, TrendingUp } from "lucide-react";
+import aboutImage from "@/assets/about.jpg";
 
 const values = [
   { icon: Globe, title: "Multi-National Reach", desc: "Our global presence enables us to serve clients across continents, bringing diverse perspectives and local market expertise to every engagement." },
@@ -16,7 +17,7 @@ const values = [
 
 const AboutPage = () => (
   <Layout>
-    <PageHero title="About Paradigm Shift" subtitle="Who We Are" description="A multi-national firm offering human capital solutions for every stage in the employee lifecycle." />
+    <PageHero title="About Paradigm Shift" subtitle="Who We Are" description="A multi-national firm offering human capital solutions for every stage in the employee lifecycle." image={aboutImage} />
 
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 max-w-4xl">
