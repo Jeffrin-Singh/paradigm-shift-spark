@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
+import serviceImage from "@/assets/service-learning.jpg";
 
 const LearningSolutionsPage = () => (
   <Layout>
-    <PageHero title="Learning Solutions" subtitle="Our Services" description="Best-in-class training processes to reduce costs and deliver quantifiable results." />
+    <PageHero title="Learning Solutions" subtitle="Our Services" description="Best-in-class training processes to reduce costs and deliver quantifiable results." image={serviceImage} />
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 max-w-4xl">
         <ScrollReveal>

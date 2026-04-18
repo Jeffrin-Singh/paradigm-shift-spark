@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import { HelpCircle } from "lucide-react";
+import serviceImage from "@/assets/service-transition.jpg";
 
 const questions = [
   "Are you a Dynamic Business?",
@@ -12,7 +13,7 @@ const questions = [
 
 const CareerTransitionPage = () => (
   <Layout>
-    <PageHero title="Career Transition Services" subtitle="Our Services" description="Flexible coaching and learning programs for workforce transitions." />
+    <PageHero title="Career Transition Services" subtitle="Our Services" description="Flexible coaching and learning programs for workforce transitions." image={serviceImage} />
     <section className="py-20 md:py-28">
       <div className="container mx-auto px-4 max-w-4xl">
         <ScrollReveal>
