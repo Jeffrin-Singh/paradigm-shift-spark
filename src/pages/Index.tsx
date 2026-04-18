@@ -4,6 +4,8 @@ import Layout from "@/components/layout/Layout";
 import ScrollReveal from "@/components/shared/ScrollReveal";
 import ServiceCard from "@/components/shared/ServiceCard";
 import { Users, Clock, ClipboardCheck, BarChart3, GraduationCap, ArrowRightLeft, Globe, Lightbulb, Shield, TrendingUp, Star, Handshake, ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-home.jpg";
+import aboutImage from "@/assets/about.jpg";
 
 const services = [
   { title: "Permanent Recruitment", description: "Finding the right person for the right job at the shortest possible time.", icon: Users, path: "/services/permanent-recruitment" },
@@ -27,6 +29,14 @@ const Index = () => (
   <Layout>
     {/* Hero */}
     <section className="hero-gradient relative overflow-hidden">
+      <img
+        src={heroImage}
+        alt="Diverse multinational business professionals collaborating in a modern corporate office"
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
+        width={1920}
+        height={1080}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(205,78%,40%,0.3)_0%,transparent_60%)]" />
       <div className="container mx-auto px-4 py-24 md:py-36 relative z-10">
         <div className="max-w-3xl">
@@ -78,14 +88,21 @@ const Index = () => (
             </Button>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <div className="grid grid-cols-2 gap-4">
-              {strengths.slice(0, 4).map((s, i) => (
-                <div key={i} className="bg-card rounded-xl p-5 card-elevated border border-border/50">
-                  <s.icon className="w-8 h-8 text-primary mb-3" />
-                  <h4 className="font-heading font-semibold text-sm text-foreground">{s.title}</h4>
-                  <p className="text-muted-foreground text-xs mt-1">{s.desc}</p>
-                </div>
-              ))}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/10 rounded-2xl blur-2xl" />
+              <img
+                src={aboutImage}
+                alt="Executive leadership team in strategic consulting meeting with global skyline view"
+                className="relative rounded-2xl shadow-2xl w-full h-auto object-cover aspect-[4/3]"
+                loading="lazy"
+                width={1600}
+                height={1200}
+              />
+              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-5 card-elevated border border-border/50 hidden sm:block max-w-[220px]">
+                <Globe className="w-6 h-6 text-primary mb-2" />
+                <p className="font-heading font-semibold text-sm text-foreground">4 Global Offices</p>
+                <p className="text-muted-foreground text-xs mt-1">Sydney · Singapore · Dubai · Mumbai</p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
