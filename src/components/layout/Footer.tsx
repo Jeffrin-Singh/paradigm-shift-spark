@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const services = [
   { name: "Permanent Recruitment", path: "/services/permanent-recruitment" },
@@ -18,11 +19,12 @@ const offices = [
 ];
 
 const Footer = () => (
-  <footer className="bg-foreground text-primary-foreground">
-    <div className="container mx-auto px-4 py-16">
+  <footer className="bg-[hsl(224,30%,8%)] text-primary-foreground relative overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,hsl(273,58%,40%,0.25),transparent_60%),radial-gradient(ellipse_at_bottom_right,hsl(199,76%,53%,0.18),transparent_60%)]" />
+    <div className="container mx-auto px-4 py-16 relative">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <h3 className="font-heading text-xl font-bold mb-2">Paradigm Shift</h3>
+          <img src={logo} alt="Paradigm Shift logo" className="h-14 w-auto mb-4 brightness-0 invert opacity-90" />
           <p className="text-primary-foreground/60 text-sm mb-4">Enabling Careers</p>
           <p className="text-primary-foreground/50 text-sm italic">People Are Our Business</p>
         </div>
@@ -59,7 +61,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="border-t border-primary-foreground/10">
+    <div className="border-t border-primary-foreground/10 relative">
       <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-2">
         <p className="text-xs text-primary-foreground/40">© {new Date().getFullYear()} Paradigm Shift. All rights reserved.</p>
         <p className="text-xs text-primary-foreground/40">People Are Our Business</p>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const services = [
   { name: "Permanent Recruitment", path: "/services/permanent-recruitment" },
@@ -20,14 +21,11 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg hero-gradient" />
-          <div>
-            <span className="font-heading font-bold text-lg text-foreground leading-none">Paradigm Shift</span>
-            <span className="hidden sm:block text-[10px] text-muted-foreground tracking-widest uppercase">Enabling Careers</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="Paradigm Shift logo" className="h-10 md:h-12 w-auto" />
+          <span className="hidden sm:block text-[10px] text-muted-foreground tracking-[0.2em] uppercase font-medium">Enabling Careers</span>
         </Link>
 
         {/* Desktop nav */}
