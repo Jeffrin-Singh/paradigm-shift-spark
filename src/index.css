@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,16 +15,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 12%;
 
-    --primary: 205 78% 28%;
+    --primary: 273 58% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 220 25% 12%;
+    --secondary: 199 76% 53%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 15% 94%;
+    --muted: 210 15% 95%;
     --muted-foreground: 220 10% 46%;
 
-    --accent: 38 60% 52%;
+    --accent: 199 76% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,14 +32,17 @@
 
     --border: 214 20% 90%;
     --input: 214 20% 90%;
-    --ring: 205 78% 28%;
+    --ring: 273 58% 40%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(205, 78%, 28%) 0%, hsl(195, 60%, 35%) 50%, hsl(205, 65%, 22%) 100%);
-    --section-gradient: linear-gradient(180deg, hsl(210, 20%, 98%) 0%, hsl(210, 25%, 95%) 100%);
-    --card-shadow: 0 4px 24px -4px hsl(220 25% 12% / 0.08);
-    --card-shadow-hover: 0 12px 40px -8px hsl(220 25% 12% / 0.15);
+    --hero-gradient: linear-gradient(135deg, hsl(273, 58%, 40%) 0%, hsl(240, 60%, 45%) 50%, hsl(199, 76%, 53%) 100%);
+    --brand-gradient: linear-gradient(135deg, hsl(273, 58%, 40%) 0%, hsl(199, 76%, 53%) 100%);
+    --section-gradient: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(210, 30%, 97%) 100%);
+    --card-shadow: 0 4px 24px -4px hsl(273 58% 40% / 0.08);
+    --card-shadow-hover: 0 18px 50px -10px hsl(273 58% 40% / 0.22);
+    --glass-bg: hsla(0, 0%, 100%, 0.65);
+    --glass-border: hsla(273, 58%, 40%, 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -97,7 +100,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: var(--hero-gradient);
+    background-image: var(--brand-gradient);
   }
   .section-gradient {
     background: var(--section-gradient);
@@ -105,13 +108,22 @@
   .hero-gradient {
     background: var(--hero-gradient);
   }
+  .brand-gradient {
+    background: var(--brand-gradient);
+  }
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+  }
   .card-elevated {
     box-shadow: var(--card-shadow);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
   }
   .card-elevated:hover {
     box-shadow: var(--card-shadow-hover);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
 }
 
