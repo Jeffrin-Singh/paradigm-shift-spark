@@ -10,10 +10,15 @@ import { useToast } from "@/hooks/use-toast";
 import contactImage from "@/assets/contact.jpg";
 
 const offices = [
-  { city: "Sydney", address: "Level 15 Eclipse Tower, 60 Station Street, Parramatta NSW 2150" },
-  { city: "Singapore", address: "Level 39 Marina Bay Financial Centre Tower 2, 10 Marina Boulevard Singapore, 018983" },
-  { city: "Dubai", address: "Level 41, Emirates Towers, Sheikh Zayed Road, Dubai" },
-  { city: "Mumbai", address: "Level 8, Vibgyor Towers C62, G Block, Bandra Kurla Complex, Mumbai, 400 098" },
+  { city: "Sydney", address: "49th Floor, 8 Parramatta Square, Sydney, New South Wales, 2150, Australia" },
+  { city: "Melbourne", address: "460 Lonsdale Street, Level 13 & Level 14, Melbourne, Victoria 3000, Australia" },
+  { city: "Brisbane", address: "80 Ann Street, Brisbane, Queensland, 4000, Australia" },
+  { city: "Perth", address: "Level 27, St Martins Centre, 44 St Georges Terrace, Perth, Western Australia, 6000, Australia" },
+  { city: "New Zealand", address: "50 Albert St, Auckland CBD, Auckland, 1010" },
+  { city: "Singapore", address: "410 North, Bridge North, Singapore, 188726, Singapore" },
+  { city: "Hong Kong", address: "16F & 17F, Nathan Road, Kowloon, Hong Kong" },
+  { city: "UAE", address: "Standard Chartered Tower, Level 5, Emaar Square Downtown Burj Khalifa, Dubai, United Arab Emirates" },
+  { city: "India", address: "Level 15 Concorde Towers UB City, #24 Vittal Mallya Road, Ashok Nagar, Bengaluru, Karnataka, 560001, India" },
 ];
 
 const ContactPage = () => {

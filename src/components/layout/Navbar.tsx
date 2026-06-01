@@ -22,9 +22,9 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
-      <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
+      <div className="container mx-auto flex items-center justify-between h-20 md:h-28 px-4">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Paradigm Shift logo" className="h-10 md:h-12 w-auto" />
+          <img src={logo} alt="Paradigm Shift logo" className="h-16 md:h-20 w-auto" />
           <span className="hidden sm:block text-[10px] text-muted-foreground tracking-[0.2em] uppercase font-medium">Enabling Careers</span>
         </Link>
 
