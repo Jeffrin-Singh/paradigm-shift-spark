@@ -11,6 +11,7 @@ const forClients = [
   { name: "Employee Insights", path: "/for-clients/employee-insights" },
   { name: "Learning Solutions", path: "/for-clients/learning-solutions" },
   { name: "Career Transition", path: "/for-clients/career-transition" },
+  { name: "Payroll Services", path: "/for-clients/payroll-services" },
 ];
 
 const contractors = [

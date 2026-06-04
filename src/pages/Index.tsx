@@ -120,7 +120,7 @@ const Index = () => (
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <p className="text-primary text-sm uppercase tracking-widest font-semibold mb-3">What We Offer</p>
+            <p className="text-primary text-sm uppercase tracking-widest font-semibold mb-3">What We Offer for</p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Clients</h2>
           </div>
         </ScrollReveal>

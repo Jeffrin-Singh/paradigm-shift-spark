@@ -13,6 +13,7 @@ import CandidateAssessmentsPage from "./pages/services/CandidateAssessmentsPage"
 import EmployeeInsightsPage from "./pages/services/EmployeeInsightsPage";
 import LearningSolutionsPage from "./pages/services/LearningSolutionsPage";
 import CareerTransitionPage from "./pages/services/CareerTransitionPage";
+import PayrollServicesPage from "./pages/services/PayrollServicesPage";
 import ContractingPage from "./pages/services/ContractingPage";
 import NotFound from "./pages/NotFound";
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/for-clients/employee-insights" element={<EmployeeInsightsPage />} />
           <Route path="/for-clients/learning-solutions" element={<LearningSolutionsPage />} />
           <Route path="/for-clients/career-transition" element={<CareerTransitionPage />} />
+          <Route path="/for-clients/payroll-services" element={<PayrollServicesPage />} />
           <Route path="/contractors/contracting" element={<ContractingPage />} />
           {/* Backward-compatible redirects from old /services URLs */}
           <Route path="/services" element={<Navigate to="/for-clients" replace />} />

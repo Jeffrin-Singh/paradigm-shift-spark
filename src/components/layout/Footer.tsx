@@ -7,6 +7,7 @@ const forClients = [
   { name: "Temporary Staffing", path: "/for-clients/temporary-staffing" },
   { name: "Candidate Assessments", path: "/for-clients/candidate-assessments" },
   { name: "Employee Insights", path: "/for-clients/employee-insights" },
+  { name: "Payroll Services", path: "/for-clients/payroll-services" },
   { name: "Learning Solutions", path: "/for-clients/learning-solutions" },
   { name: "Career Transition", path: "/for-clients/career-transition" },
 ];
