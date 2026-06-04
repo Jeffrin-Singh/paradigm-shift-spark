@@ -4,18 +4,25 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
-const services = [
-  { name: "Permanent Recruitment", path: "/services/permanent-recruitment" },
-  { name: "Temporary Staffing", path: "/services/temporary-staffing" },
-  { name: "Candidate Assessments", path: "/services/candidate-assessments" },
-  { name: "Employee Insights", path: "/services/employee-insights" },
-  { name: "Learning Solutions", path: "/services/learning-solutions" },
-  { name: "Career Transition Services", path: "/services/career-transition" },
+const forClients = [
+  { name: "Permanent Recruitment", path: "/for-clients/permanent-recruitment" },
+  { name: "Temporary Staffing", path: "/for-clients/temporary-staffing" },
+  { name: "Candidate Assessments", path: "/for-clients/candidate-assessments" },
+  { name: "Employee Insights", path: "/for-clients/employee-insights" },
+  { name: "Learning Solutions", path: "/for-clients/learning-solutions" },
+  { name: "Career Transition", path: "/for-clients/career-transition" },
+];
+
+const contractors = [
+  { name: "Contracting Options", path: "/contractors/contracting" },
+  // TODO: Replace path below with the actual third-party Contractors Hub URL
+  { name: "Contractors Hub", path: "https://PLACEHOLDER-THIRDPARTY-SITE.com", external: true },
 ];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [forClientsOpen, setForClientsOpen] = useState(false);
+  const [contractorsOpen, setContractorsOpen] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -34,15 +41,32 @@ const Navbar = () => {
           <Link to="/about" className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${isActive("/about") ? "text-primary bg-primary/5" : "text-muted-foreground hover:text-foreground"}`}>About Us</Link>
 
           <div className="relative group">
-            <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname.startsWith("/services") ? "text-primary bg-primary/5" : "text-muted-foreground hover:text-foreground"}`}>
-              Services <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+            <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname.startsWith("/for-clients") ? "text-primary bg-primary/5" : "text-muted-foreground hover:text-foreground"}`}>
+              Clients <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
             </button>
             <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="bg-card rounded-lg border border-border shadow-xl p-2 min-w-[240px]">
-                <Link to="/services" className="block px-3 py-2 text-sm font-semibold text-foreground rounded-md hover:bg-muted transition-colors">All Services</Link>
+                <Link to="/for-clients" className="block px-3 py-2 text-sm font-semibold text-foreground rounded-md hover:bg-muted transition-colors">Clients</Link>
                 <div className="h-px bg-border my-1" />
-                {services.map(s => (
+                {forClients.map(s => (
                   <Link key={s.path} to={s.path} className="block px-3 py-2 text-sm text-muted-foreground rounded-md hover:bg-muted hover:text-foreground transition-colors">{s.name}</Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative group">
+            <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname.startsWith("/contractors") ? "text-primary bg-primary/5" : "text-muted-foreground hover:text-foreground"}`}>
+              Contractors <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+            </button>
+            <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-card rounded-lg border border-border shadow-xl p-2 min-w-[240px]">
+                {contractors.map(s => (
+                  s.external ? (
+                    <a key={s.path} href={s.path} target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-sm text-muted-foreground rounded-md hover:bg-muted hover:text-foreground transition-colors">{s.name}</a>
+                  ) : (
+                    <Link key={s.path} to={s.path} className="block px-3 py-2 text-sm text-muted-foreground rounded-md hover:bg-muted hover:text-foreground transition-colors">{s.name}</Link>
+                  )
                 ))}
               </div>
             </div>
@@ -68,14 +92,28 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 space-y-1">
             <Link to="/" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-muted">Home</Link>
             <Link to="/about" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-muted">About Us</Link>
-            <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-muted">
-              Services <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+            <button onClick={() => setForClientsOpen(!forClientsOpen)} className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-muted">
+              Clients <ChevronDown className={`w-4 h-4 transition-transform ${forClientsOpen ? "rotate-180" : ""}`} />
             </button>
-            {servicesOpen && (
+            {forClientsOpen && (
               <div className="pl-4 space-y-1">
-                <Link to="/services" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm font-semibold rounded-md hover:bg-muted">All Services</Link>
-                {services.map(s => (
+                <Link to="/for-clients" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm font-semibold rounded-md hover:bg-muted">Clients</Link>
+                {forClients.map(s => (
                   <Link key={s.path} to={s.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-muted-foreground rounded-md hover:bg-muted">{s.name}</Link>
+                ))}
+              </div>
+            )}
+            <button onClick={() => setContractorsOpen(!contractorsOpen)} className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-muted">
+              Contractors <ChevronDown className={`w-4 h-4 transition-transform ${contractorsOpen ? "rotate-180" : ""}`} />
+            </button>
+            {contractorsOpen && (
+              <div className="pl-4 space-y-1">
+                {contractors.map(s => (
+                  s.external ? (
+                    <a key={s.path} href={s.path} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-muted-foreground rounded-md hover:bg-muted">{s.name}</a>
+                  ) : (
+                    <Link key={s.path} to={s.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-muted-foreground rounded-md hover:bg-muted">{s.name}</Link>
+                  )
                 ))}
               </div>
             )}

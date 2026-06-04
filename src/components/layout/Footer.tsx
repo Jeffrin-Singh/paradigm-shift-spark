@@ -2,13 +2,19 @@ import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const services = [
-  { name: "Permanent Recruitment", path: "/services/permanent-recruitment" },
-  { name: "Temporary Staffing", path: "/services/temporary-staffing" },
-  { name: "Candidate Assessments", path: "/services/candidate-assessments" },
-  { name: "Employee Insights", path: "/services/employee-insights" },
-  { name: "Learning Solutions", path: "/services/learning-solutions" },
-  { name: "Career Transition Services", path: "/services/career-transition" },
+const forClients = [
+  { name: "Permanent Recruitment", path: "/for-clients/permanent-recruitment" },
+  { name: "Temporary Staffing", path: "/for-clients/temporary-staffing" },
+  { name: "Candidate Assessments", path: "/for-clients/candidate-assessments" },
+  { name: "Employee Insights", path: "/for-clients/employee-insights" },
+  { name: "Learning Solutions", path: "/for-clients/learning-solutions" },
+  { name: "Career Transition", path: "/for-clients/career-transition" },
+];
+
+const contractors = [
+  { name: "Contracting Options", path: "/contractors/contracting" },
+  // TODO: Replace path below with the actual third-party Contractors Hub URL
+  { name: "Contractors Hub", path: "https://PLACEHOLDER-THIRDPARTY-SITE.com", external: true },
 ];
 
 const offices = [
@@ -39,31 +45,47 @@ const Footer = () => (
           <ul className="space-y-2">
             <li><Link to="/" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">Home</Link></li>
             <li><Link to="/about" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">About Us</Link></li>
-            <li><Link to="/services" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">Services</Link></li>
+            <li><Link to="/for-clients" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">Clients</Link></li>
+            <li><Link to="/contractors/contracting" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">Contractors</Link></li>
             <li><Link to="/contact" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">Contact Us</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/70">Services</h4>
+          <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/70">Clients</h4>
           <ul className="space-y-2">
-            {services.map(s => (
+            {forClients.map(s => (
               <li key={s.path}><Link to={s.path} className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{s.name}</Link></li>
             ))}
           </ul>
         </div>
 
         <div>
-          <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/70">Global Offices</h4>
-          <ul className="space-y-3">
-            {offices.map(o => (
-              <li key={o.city} className="flex gap-2 text-sm text-primary-foreground/60">
-                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 text-accent" />
-                <span><strong className="text-primary-foreground/80">{o.city}</strong> — {o.address}</span>
+          <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/70">Contractors</h4>
+          <ul className="space-y-2">
+            {contractors.map(s => (
+              <li key={s.path}>
+                {s.external ? (
+                  <a href={s.path} target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{s.name}</a>
+                ) : (
+                  <Link to={s.path} className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{s.name}</Link>
+                )}
               </li>
             ))}
           </ul>
         </div>
+      </div>
+
+      <div className="mt-12 pt-10 border-t border-primary-foreground/10">
+        <h4 className="font-heading font-semibold mb-6 text-sm uppercase tracking-wider text-primary-foreground/70">Global Offices</h4>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {offices.map(o => (
+            <li key={o.city} className="flex gap-2 text-sm text-primary-foreground/60">
+              <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 text-accent" />
+              <span><strong className="text-primary-foreground/80">{o.city}</strong> — {o.address}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
     <div className="border-t border-primary-foreground/10 relative">

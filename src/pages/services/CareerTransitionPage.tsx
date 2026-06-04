@@ -14,7 +14,7 @@ const questions = [
 
 const CareerTransitionPage = () => (
   <Layout>
-    <PageHero title="Career Transition Services" subtitle="Our Services" description="Flexible coaching and learning programs for workforce transitions." image={serviceImage} />
+    <PageHero title="Career Transition" subtitle="Clients" description="Flexible coaching and learning programs for workforce transitions." image={serviceImage} />
     <section className="py-16 md:py-20">
       <div className="container mx-auto px-4 max-w-4xl">
         <ScrollReveal>
@@ -33,7 +33,7 @@ const CareerTransitionPage = () => (
       <p className="text-muted-foreground leading-relaxed mb-8">
         Our suite of flexible coaching and learning programs provides guidance and support to your departing workforce find new jobs faster. Through in-person, virtual, blended learning or group programs, we help individuals focus on their next move and develop the skills to achieve their career goals.
       </p>
-      <Button asChild size="lg"><Link to="/contact">Learn About Transition Services</Link></Button>
+      <Button asChild size="lg"><Link to="/contact">Learn About Transition Solutions</Link></Button>
     </ServiceContent>
   </Layout>
 );

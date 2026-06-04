@@ -7,7 +7,7 @@ import serviceImage from "@/assets/service-learning.jpg";
 
 const LearningSolutionsPage = () => (
   <Layout>
-    <PageHero title="Learning Solutions" subtitle="Our Services" description="Best-in-class training processes to reduce costs and deliver quantifiable results." image={serviceImage} />
+    <PageHero title="Learning Solutions" subtitle="Clients" description="Best-in-class training processes to reduce costs and deliver quantifiable results." image={serviceImage} />
     <ServiceContent image={serviceImage} imageAlt="Learning and development leader">
       <p className="text-muted-foreground leading-relaxed mb-4">
         We offer a suite of best-in-class training processes that enable customers to reduce costs, sharpen their business focus and obtain quantifiable results. We offer training solutions to small and medium enterprises and large enterprises across our footprint.

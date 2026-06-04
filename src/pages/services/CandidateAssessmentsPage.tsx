@@ -15,7 +15,7 @@ const questions = [
 
 const CandidateAssessmentsPage = () => (
   <Layout>
-    <PageHero title="Candidate Assessments" subtitle="Our Services" description="Streamline and optimize employee recruitment and onboarding." image={serviceImage} />
+    <PageHero title="Candidate Assessments" subtitle="Clients" description="Streamline and optimize employee recruitment and onboarding." image={serviceImage} />
     <section className="py-16 md:py-20">
       <div className="container mx-auto px-4 max-w-5xl">
         <ScrollReveal>

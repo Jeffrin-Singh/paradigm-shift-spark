@@ -16,7 +16,7 @@ const areas = [
 
 const TemporaryStaffingPage = () => (
   <Layout>
-    <PageHero title="Temporary Staffing" subtitle="Our Services" description="We help you with your staffing requirements so that you can focus on your core business!" image={serviceImage} />
+    <PageHero title="Temporary Staffing" subtitle="Clients" description="We help you with your staffing requirements so that you can focus on your core business!" image={serviceImage} />
     <ServiceContent image={serviceImage} imageAlt="Workforce solutions consultant in modern office" imageSide="left">
       <p className="text-muted-foreground leading-relaxed mb-4">
         A combination of people, process & technology focus enables us to enhance business productivity by enabling our clients to outsource their staffing requirements and allowing them to focus on operating and growing their core business.

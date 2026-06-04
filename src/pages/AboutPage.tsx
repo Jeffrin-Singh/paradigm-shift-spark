@@ -12,7 +12,7 @@ const values = [
   { icon: Lightbulb, title: "Innovative Solutions", desc: "We leverage cutting-edge technology and methodologies to deliver modern, effective human capital solutions." },
   { icon: Target, title: "Industry Knowledge", desc: "Deep expertise across sectors allows us to understand the unique challenges and requirements of every client." },
   { icon: Shield, title: "Reliable Delivery", desc: "Consistency and dependability are at the heart of everything we do — our clients can count on us every time." },
-  { icon: TrendingUp, title: "Cost-Effective Services", desc: "We maximise value while maintaining the highest standards of quality and service excellence." },
+  { icon: TrendingUp, title: "Cost-Effective For Clients", desc: "We maximise value while maintaining the highest standards of quality and service excellence." },
 ];
 
 const AboutPage = () => (

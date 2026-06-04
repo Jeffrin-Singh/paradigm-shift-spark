@@ -14,7 +14,7 @@ const questions = [
 
 const EmployeeInsightsPage = () => (
   <Layout>
-    <PageHero title="Employee Insights" subtitle="Our Services" description="Read the pulse of your organisation with an enterprise survey." image={serviceImage} />
+    <PageHero title="Employee Insights" subtitle="Clients" description="Read the pulse of your organisation with an enterprise survey." image={serviceImage} />
     <section className="py-16 md:py-20">
       <div className="container mx-auto px-4 max-w-4xl">
         <ScrollReveal>

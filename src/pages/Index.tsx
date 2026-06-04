@@ -13,13 +13,13 @@ import portrait3 from "@/assets/portrait-3.jpg";
 import featureHandshake from "@/assets/feature-handshake.jpg";
 
 
-const services = [
-  { title: "Permanent Recruitment", description: "Finding the right person for the right job at the shortest possible time.", icon: Users, path: "/services/permanent-recruitment" },
-  { title: "Temporary Staffing", description: "We help you with your staffing requirements so you can focus on your core business.", icon: Clock, path: "/services/temporary-staffing" },
-  { title: "Candidate Assessments", description: "Streamline and optimize employee recruitment with behavioural and skills assessments.", icon: ClipboardCheck, path: "/services/candidate-assessments" },
-  { title: "Employee Insights", description: "Read the pulse of your organisation with enterprise surveys and analytics.", icon: BarChart3, path: "/services/employee-insights" },
-  { title: "Learning Solutions", description: "Best-in-class training processes to reduce costs and deliver quantifiable results.", icon: GraduationCap, path: "/services/learning-solutions" },
-  { title: "Career Transition Services", description: "Flexible coaching and learning programs to help departing workforce find new roles faster.", icon: ArrowRightLeft, path: "/services/career-transition" },
+const forClients = [
+  { title: "Permanent Recruitment", description: "Finding the right person for the right job at the shortest possible time.", icon: Users, path: "/for-clients/permanent-recruitment" },
+  { title: "Temporary Staffing", description: "We help you with your staffing requirements so you can focus on your core business.", icon: Clock, path: "/for-clients/temporary-staffing" },
+  { title: "Candidate Assessments", description: "Streamline and optimize employee recruitment with behavioural and skills assessments.", icon: ClipboardCheck, path: "/for-clients/candidate-assessments" },
+  { title: "Employee Insights", description: "Read the pulse of your organisation with enterprise surveys and analytics.", icon: BarChart3, path: "/for-clients/employee-insights" },
+  { title: "Learning Solutions", description: "Best-in-class training processes to reduce costs and deliver quantifiable results.", icon: GraduationCap, path: "/for-clients/learning-solutions" },
+  { title: "Career Transition For Clients", description: "Flexible coaching and learning programs to help departing workforce find new roles faster.", icon: ArrowRightLeft, path: "/for-clients/career-transition" },
 ];
 
 const strengths = [
@@ -62,7 +62,7 @@ const Index = () => (
           <ScrollReveal delay={300}>
             <div className="flex flex-wrap gap-4">
               <Button asChild variant="hero" size="lg">
-                <Link to="/services">Explore Services</Link>
+                <Link to="/for-clients">Explore Clients</Link>
               </Button>
               <Button asChild variant="hero-outline" size="lg">
                 <Link to="/contact">Contact Us</Link>
@@ -115,17 +115,17 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Services */}
+    {/* Clients */}
     <section className="section-gradient py-20 md:py-28">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-14">
             <p className="text-primary text-sm uppercase tracking-widest font-semibold mb-3">What We Offer</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">Clients</h2>
           </div>
         </ScrollReveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((s, i) => (
+          {forClients.map((s, i) => (
             <ServiceCard key={s.path} {...s} delay={i * 100} />
           ))}
         </div>
@@ -156,7 +156,7 @@ const Index = () => (
                 </div>
                 <div>
                   <div className="text-3xl md:text-4xl font-heading font-bold">6</div>
-                  <div className="text-primary-foreground/70 text-xs uppercase tracking-wider mt-1">Services</div>
+                  <div className="text-primary-foreground/70 text-xs uppercase tracking-wider mt-1">Clients</div>
                 </div>
                 <div>
                   <div className="text-3xl md:text-4xl font-heading font-bold">1</div>
