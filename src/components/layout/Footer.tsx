@@ -15,7 +15,7 @@ const forClients = [
 const contractors = [
   { name: "Contracting Options", path: "/contractors/contracting" },
   // TODO: Replace path below with the actual third-party Contractors Hub URL
-  { name: "Contractors Hub", path: "https://PLACEHOLDER-THIRDPARTY-SITE.com", external: true },
+  { name: "Contractors Hub", path: "https://www.theaccessgroup.com/en-au/payroll/services/outsourcing/?gclsrc=aw.ds&&source=GoogleSearchNetwork&device=m&campaign=17805198892&adgroup=139895795955&keyword=australian%20payroll%20provider&matchtype=p&placement=&adposition=&location=9071737&gad_source=1&gad_campaignid=17805198892&gclid=Cj0KCQjw_vnQBhCxARIsADcZyxJyjem6aFsLNXLciDiySnCZoUc9MzZuRSdW0wWj7qT1y2jKrSsH0wMaAjyrEALw_wcB#compare", external: true },
 ];
 
 const offices = [
